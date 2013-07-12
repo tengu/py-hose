@@ -1,0 +1,6 @@
+{
+  "repositories": [
+    { "owner": "taro", "name": "yoyodyne" },
+    { "owner": "jiro", "name": "projectA" }
+  ]
+}
