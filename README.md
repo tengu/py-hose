@@ -1,5 +1,7 @@
-hose: an attempt to unify unix pipeline and python
-==================================================
+py-hose
+=======
+
+an attempt to unify unix pipeline and python
 
 ### status: 
 This is an experimental software.
@@ -39,11 +41,11 @@ report the most prolific followers of nodejs-related repos.
 
 Given this pipeline in unix shell:
 
-   foo  | bar  | baz 
+       foo  | bar  | baz 
 
 we should have this in python:
 
-   foo >> bar >> baz 
+       foo >> bar >> baz 
 
 Any segment should be easily swappable between the python and shell version.
 Command foo should be callable from python. Conversely python function that 
@@ -58,13 +60,17 @@ implements a segment should be callable as a command.
 * unify access to various data sources: db, web, json, log..
 
 ### todo:
+
 * functional
+
   current processors could be replaced by a map class 
   that takes a data processing function.
 
 * forking and joining the streams
+
   for stream of pairs, allow pair of processors: 
-  >> proc(passthru(), fmt())
-  >> proc(passthru(), fetch())
-  alternatively, apply the proc to a selected element, leaving other as is:
-  >> sel(index=1).fmt(...) >> sel(index=1).fetch() >> out()
+
+      >> proc(passthru(), fmt())
+      >> proc(passthru(), fetch())
+      alternatively, apply the proc to a selected element, leaving other as is:
+      >> sel(index=1).fmt(...) >> sel(index=1).fetch() >> out()
