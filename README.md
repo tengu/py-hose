@@ -1,7 +1,7 @@
 hose: an attempt to unify unix pipeline and python
 ==================================================
 
-### note
+### status: 
 This is an experimental software.
 
 ### hose
