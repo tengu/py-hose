@@ -70,7 +70,7 @@ implements a segment should be callable as a command.
 
   for stream of pairs, allow pair of processors: 
 
-      >> proc(passthru(), fmt())
-      >> proc(passthru(), fetch())
-      alternatively, apply the proc to a selected element, leaving other as is:
-      >> sel(index=1).fmt(...) >> sel(index=1).fetch() >> out()
+       >> proc(passthru(), fmt())
+       >> proc(passthru(), fetch())
+       alternatively, apply the proc to a selected element, leaving other as is:
+       >> sel(index=1).fmt(...) >> sel(index=1).fetch() >> out()
